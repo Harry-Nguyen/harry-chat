@@ -16,9 +16,24 @@
       <td><%= u.email %></td>
       <td>
         <% if u.id != session[:user_id] %>
-          <%= form_tag add_friend_path, class: "add-friend-form" do %>
-            <%= text_field_tag :friend_id, u.id %>
-            <%= submit_tag 'Add friend', class: "btn btn-primary" %>
+          <%
+            is_friend = false
+            if @friends
+              @friends.each do |fs|
+                if u.id == fs.friend_id
+                  is_friend = true
+                  break
+                end
+              end
+            end
+          %>
+          <% if is_friend %>
+            <span>Already friend</span>
+          <% else %>
+            <%= form_tag add_friend_path, class: "add-friend-form" do %>
+              <%= text_field_tag :friend_id, u.id %>
+              <%= submit_tag 'Add friend', class: "btn btn-primary" %>
+            <% end %>
           <% end %>
         <% end %>
       </td>
