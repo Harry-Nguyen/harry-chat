@@ -24,7 +24,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       flash[:success] = 'Message is created successfully'
-      redirect_to messages_path
+      redirect_to sent_path
     else
       render 'new'
     end
