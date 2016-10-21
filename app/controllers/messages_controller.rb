@@ -13,10 +13,6 @@ class MessagesController < ApplicationController
     @messages = @messages.sort{|x, y| y.created_at <=> x.created_at}
   end
 
-  def show
-    
-  end
-
   def new
     @message = Message.new
     @friendship = Friendship.where(owner_id: session[:user_id])
@@ -36,11 +32,17 @@ class MessagesController < ApplicationController
 
   def read
     @message = Message.find(params[:id])
-    @message.read_at = Time.now
-    if @message.save
-      flash[:success] = 'This message is marked as read'
+    @read_before = false
+
+    if @message.read_at
+      @read_before = true
     else
-      redirect_to inbox_path
+      @message.read_at = Time.now
+      if @message.save
+        flash[:success] = 'This message is marked as read'
+      else
+        redirect_to inbox_path
+      end
     end
   end
 

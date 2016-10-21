@@ -1,6 +1,6 @@
 <h1>Incoming Messages</h1>
 <% i = 0 %>
-  <table>
+  <table class="table">
     <tr>
       <th>ID</th>
       <th>Sender</th>
@@ -17,7 +17,7 @@
       <td><%= m.sender %></td>
       <td><%= m.recipient %></td>
       <td><%= m.title %></td>
-      <td><%= m.body %></td>
+      <td><%= m.read_at ? "***" : m.body %></td>
       <td><%= m.created_at %></td>
       <td><%= m.read_at ? "TRUE" : "FALSE" %></td>
       <td><%= link_to 'Read this', read_message_path(m), :method => "post" %></td>
