@@ -1,0 +1,15 @@
+<h1>Single message page</h1>
+
+<% if !@is_recipient %>
+  <p>You are not the recipient of this message</p>
+<% else %>
+  <% if @read_before %>
+    <p>You have read this message before.</p>
+  <% else %>
+    <p><strong><span>Sender: </span></strong><span><%= @message.sender %></span></p>
+    <p><strong><span>Recipient: </span></strong><span><%= @message.recipient %></span></p>
+    <p><strong><span>Title: </span></strong><span><%= @message.title %></span></p>
+    <p><strong><span>Body: </span></strong><span><%= @message.body %></span></p>
+    <p><strong><span>Sent at: </span></strong><span><%= @message.created_at %></span></p>
+  <% end %>
+<% end %>

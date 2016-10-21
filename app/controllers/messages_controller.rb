@@ -3,6 +3,19 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
+  def show
+    @message = Message.find(params[:id])
+    @is_recipient = false
+    @read_before = false
+
+    if @message.recipient_id == session[:user_id]
+      @is_recipient = true
+    end
+    if @message.read_at
+      @read_before = true
+    end
+  end
+
   def inbox
     @messages = Message.where(recipient_id: session[:user_id])
     @messages = @messages.sort{|x, y| y.created_at <=> x.created_at}
