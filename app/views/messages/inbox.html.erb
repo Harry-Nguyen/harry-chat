@@ -1,4 +1,3 @@
-<div class="col-sm-12">
 <h1>Incoming Messages</h1>
 <% i = 0 %>
   <table>
@@ -10,18 +9,18 @@
       <th>Body</th>
       <th>Created Time</th>
       <th>Read?</th>
+      <th>Read</th>
     </tr>
 <% @messages.each do |m| %>
-  <% i += 1 %>
-    <tr>
-      <td><%= i %></td>
+    <tr class="<%= m.read_at ? 'message-read' : 'message-unread' %>">
+      <td><%= m.id %></td>
       <td><%= m.sender %></td>
       <td><%= m.recipient %></td>
       <td><%= m.title %></td>
       <td><%= m.body %></td>
       <td><%= m.created_at %></td>
       <td><%= m.read_at ? "TRUE" : "FALSE" %></td>
+      <td><%= link_to 'Read this', read_message_path(m), :method => "post" %></td>
     </tr>
 <% end %>
   </table>
-</div>

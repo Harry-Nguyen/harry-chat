@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   get 'messages/new'
   post 'messages' => 'messages#create'
   get 'messages' => 'messages#index'
+
+  resources :messages do
+    member do
+      post 'read'
+    end
+  end
 end

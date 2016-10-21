@@ -1,0 +1,12 @@
+<h1>Single message page</h1>
+<% if @message.errors.present? %>
+  <%= @message.errors.full_messages.to_sentence %>
+<% end %>
+
+<p><strong><span>Sender: </span></strong><span><%= @message.sender %></span></p>
+<p><strong><span>Recipient: </span></strong><span><%= @message.recipient %></span></p>
+<p><strong><span>Title: </span></strong><span><%= @message.title %></span></p>
+<p><strong><span>Body: </span></strong><span><%= @message.body %></span></p>
+<p><strong><span>Sent at: </span></strong><span><%= @message.created_at %></span></p>
+
+<%= link_to "Inbox", inbox_path, class: "btn btn-warning" %>

@@ -12,9 +12,8 @@
       <th>Read?</th>
     </tr>
 <% @messages.each do |m| %>
-  <% i += 1 %>
     <tr>
-      <td><%= i %></td>
+      <td><%= m.id %></td>
       <td><%= m.sender %></td>
       <td><%= m.recipient %></td>
       <td><%= m.title %></td>

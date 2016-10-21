@@ -5,6 +5,11 @@ class MessagesController < ApplicationController
 
   def inbox
     @messages = Message.where(recipient_id: session[:user_id])
+    @messages = @messages.sort{|x, y| y.created_at <=> x.created_at}
+  end
+
+  def show
+    
   end
 
   def new
@@ -18,6 +23,16 @@ class MessagesController < ApplicationController
       redirect_to messages_path
     else
       render 'new'
+    end
+  end
+
+  def read
+    @message = Message.find(params[:id])
+    @message.read_at = Time.now
+    if @message.save
+      flash[:success] = 'This message is marked as read'
+    else
+      redirect_to inbox_path
     end
   end
 
