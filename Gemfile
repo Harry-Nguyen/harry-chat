@@ -50,3 +50,5 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'

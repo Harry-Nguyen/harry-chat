@@ -1,0 +1,19 @@
+<div class="col-sm-6">
+<h1>User List</h1>
+<% i = 0 %>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+<% @users.each do |u| %>
+  <% i += 1 %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= u.name %></td>
+      <td><%= u.email %></td>
+    </tr>
+<% end %>
+  </table> 
+</div>
