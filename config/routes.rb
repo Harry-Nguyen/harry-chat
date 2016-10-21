@@ -19,4 +19,7 @@ Rails.application.routes.draw do
       post 'read'
     end
   end
+
+  post 'add_friend' => 'friendships#create'
+  get 'friend_list' => 'friendships#index'
 end

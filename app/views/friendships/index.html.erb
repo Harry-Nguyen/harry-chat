@@ -1,0 +1,12 @@
+<h1>Your friend list</h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+<% @friendships.each do |f| %>
+      <td><%= f.friend %></td>
+      <td><%= f.friend.email %></td>
+    </tr>
+<% end %>
+  </table>
