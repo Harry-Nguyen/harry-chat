@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'inbox' => 'messages#inbox'
   get 'sent' => 'messages#sent'
-  get 'messages/new'
+  #get 'messages/new'
   post 'messages' => 'messages#create'
   get 'messages' => 'messages#index'
 
