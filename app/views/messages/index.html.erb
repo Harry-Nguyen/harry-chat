@@ -1,0 +1,27 @@
+<div class="col-sm-8">
+<h1>Messages List</h1>
+<% i = 0 %>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Sender</th>
+      <th>Recipient</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Created Time</th>
+      <th>Read?</th>
+    </tr>
+<% @messages.each do |m| %>
+  <% i += 1 %>
+    <tr>
+      <td><%= i %></td>
+      <td><%= m.sender %></td>
+      <td><%= m.recipient %></td>
+      <td><%= m.title %></td>
+      <td><%= m.body %></td>
+      <td><%= m.created_at %></td>
+      <td><%= m.read_at ? "TRUE" : "FALSE" %></td>
+    </tr>
+<% end %>
+  </table>
+</div>

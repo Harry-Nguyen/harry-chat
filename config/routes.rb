@@ -7,4 +7,9 @@ Rails.application.routes.draw do
   post 'login_submit' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   #delete 'sessions/destroy', as: :logout
+
+  get 'inbox' => 'messages#inbox'
+  get 'messages/new'
+  post 'messages' => 'messages#create'
+  get 'messages' => 'messages#index'
 end

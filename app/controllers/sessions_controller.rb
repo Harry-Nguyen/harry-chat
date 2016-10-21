@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         session[:user_id] = @user.id
 
         flash.now[:success] = 'Login successfully.'
-        redirect_to root_path
+        redirect_to inbox_path
       else
         flash.now[:error] = 'Incorrect password'
         render 'new'

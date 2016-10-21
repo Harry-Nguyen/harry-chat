@@ -1,0 +1,13 @@
+<div class="col-sm-6">
+<h1>Send new message</h1>
+<%= form_for @message do |f| %>
+  <% if @message.errors.present? %>
+    <%= @message.errors.full_messages.to_sentence %>
+  <% end %>
+  <%= f.text_field :sender_id, placeholder: "Sender", class: "form-control" %>
+  <%= f.text_field :recipient_id, placeholder: "Recipient", class: "form-control" %>
+  <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+  <%= f.text_field :body, placeholder: "Body", class: "form-control" %>
+  <%= f.submit "Send", class: "btn btn-warning" %>
+<% end %>
+</div>

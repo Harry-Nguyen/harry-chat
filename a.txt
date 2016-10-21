@@ -1,0 +1,721 @@
+    1  sudo apt-get update
+    2  sudo apt-get install curl
+    3  bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
+    4  rails new myapp
+    5  ls
+    6  rvm --version
+    7  ruby --version
+    8  psql --version
+    9  rvm gemset list
+   10  cd /.rvm/gems
+   11  cd /home/harry/.rvm/gems
+   12  ls
+   13  rvm install ruby
+   14  ls
+   15  cd
+   16  rvm gemset list
+   17  rvm list
+   18  rvm --default use ruby-2.3.0
+   19  rvm list
+   20  psql
+   21  sudo -u postgres createuser -s $(whoami); createdb $(whoami)
+   22  psql
+   23  ls
+   24  rvm gemset list
+   25  rvm --version
+   26  ruby --version
+   27  psql --version
+   28  rails new myapp -d postgresql
+   29  source /home/harry/.rvm/scripts/rvm
+   30  rails new myapp -d postgresql
+   31  rvm gemset list
+   32  rvm list
+   33  gem -v
+   34  gem update --system
+   35  gem -v
+   36  rvm gemset list
+   37  gem outdated
+   38  gem update
+   39  gem list
+   40  gem install rails
+   41  rvm gemset list
+   42  gem list
+   43  gem outdated
+   44  rvm gemset use global
+   45  gem list
+   46  gem install rails
+   47  gem outdated
+   48  gem update
+   49  gem list
+   50  rvm gemset list
+   51  gem list
+   52  gem outdated
+   53  rvm gemset use global
+   54  gem list
+   55  gem outdated
+   56  cd /home/harry/.rvm
+   57  ls
+   58  cd gemsets
+   59  ls
+   60  cd ruby
+   61  ls
+   62  cd
+   63  ls
+   64  gem environment
+   65  cd /home/harry/.rvm/gems
+   66  ls
+   67  cd ruby-2.2.2
+   68  ls
+   69  cd gems
+   70  ls
+   71  cd
+   72  cd /.rvm/gems
+   73  cd /home/harry/.rvm/gems/ruby-2.3.0
+   74  ls
+   75  cd gems
+   76  ls
+   77  rails --version
+   78  ruby --version
+   79  psql --version
+   80  rvm --version
+   81  rails new myapp -d postgresql
+   82  rake db:create
+   83  rails s
+   84  ls
+   85  cd my*
+   86  rake db:create
+   87  rails s
+   88  cd
+   89  cd /home/harry/.rvm/gems
+   90  ls
+   91  cd
+   92  wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+   93  heroku --version
+   94  sudo nano /etc/default/grub
+   95  sudo update-grub
+   96  sudo grub-set-default 4
+   97  history > c.txt
+   98  exit
+   99  cd workspace/h*
+  100  cd workspace/harry-restaurant
+  101  cd workspace\harry-restaurant
+  102  cd workspace
+  103  cd W*/h*
+  104  history clear
+  105  history clear -a
+  106  history help
+  107  history --help
+  108  clear
+  109  ls
+  110  git init
+  111  git add .
+  112  gs
+  113  git status
+  114  git commit -m "add README.md"
+  115  git remote add origin https://github.com/Harry-Nguyen/harry-restaurant.git
+  116  git push -u origin master
+  117  rvm --version
+  118  ruby --version
+  119  rails --version
+  120  psql
+  121  cd
+  122  cd w*
+  123  cd w*/h*
+  124  rails new . -d postgresql
+  125  rake db:create
+  126  rails s
+  127  git add *
+  128  git status
+  129  git commit -m "Initialize project"
+  130  git status
+  131  git push origin master
+  132  rails s
+  133  rails g controller home index contact_us
+  134  rails s
+  135  git add .
+  136  git commit -m "add controller home with index & contact_us action"
+  137  git status
+  138  rails s
+  139  git add .
+  140  git commit -m "add information to contact us page"
+  141  git statuts
+  142  git status
+  143  exit
+  144  cd w*/h*
+  145  rails s
+  146  cd w*/h*
+  147  bundle install
+  148  rails s
+  149  git add .
+  150  git status
+  151  git commit -m "add bootstrap"
+  152  git status
+  153  git push origin master
+  154  git status
+  155  rails s
+  156  cd w*/h*
+  157  rails s
+  158  git add .
+  159  git commit -m "Add header"
+  160  rails s
+  161  git add .
+  162  git commit -m "Add section navigation buttons to index page"
+  163  git status
+  164  rails g scaffold Food name description:text price:integer section image
+  165  rake db:migrate
+  166  rails s
+  167  rails db:fixtures:load
+  168  rails console
+  169  clear
+  170  rails s
+  171  cd w*h*
+  172  cd w*/h*
+  173  git add *.jpg
+  174  git add *.png
+  175  git commit -m "add food images"
+  176  rails *
+  177  cd w*/h*
+  178  git push origin master
+  179  rails g scaffold Food name description:text price:integer section image
+  180  rake db:migrate
+  181  rails s
+  182  rake db:migrate
+  183  rails s
+  184  bin/rails db:migrate RAILS_ENV=development
+  185  rails s
+  186  bin/rails db:migrate RAILS_ENV=development
+  187  psql
+  188  cd w*/h*
+  189  rails console
+  190  xtei
+  191  iext:
+  192  xt
+  193  cd w*/h*
+  194  rake db:create
+  195  rake db:migrate
+  196  rails s
+  197  rails db:fixtures:load
+  198  rails console
+  199  rails s
+  200  git add .
+  201  git commit -m "add food model and example"
+  202  git status
+  203  bundle install
+  204  rails s
+  205  git add .
+  206  git commit -m "add tether"
+  207  rails s
+  208  git add .
+  209  git commit -m "Filter food by section"
+  210  rails s
+  211  rails db:fixtures:load
+  212  rails s
+  213  git status
+  214  git add *.yml
+  215  git status
+  216  git commit -m "change food price"
+  217  git status
+  218  git add .
+  219  git commit -m "Sort foods"
+  220  rails s
+  221  rails console
+  222  clear
+  223  psql
+  224  rake db:create
+  225  rake db:migrate
+  226  rails db:fixtures:load
+  227  rails console
+  228  exit
+  229  psql
+  230  cd w*/h*
+  231  rake db:create
+  232  psql
+  233  rake db:migrate
+  234  rails console
+  235  rails db:fixtures:load
+  236  rails console
+  237  rails db:fixtures:load
+  238  rails console
+  239  psql
+  240  rake db:create
+  241  rake db:migrate
+  242  rails console
+  243  rails db:fixtures:load
+  244  rails console
+  245  psql
+  246  rake db:create
+  247  rake db:migrate
+  248  rails console
+  249  psql
+  250  rake db:create
+  251  rake db:migrate
+  252  rails console
+  253  psql
+  254  rake db:create
+  255  rake db:migrate
+  256  rails console
+  257  rails db:fixtures:load
+  258  rails console
+  259  rails s
+  260  git add .
+  261  git status
+  262  git commit -m "edit foods.yml"
+  263  rails s
+  264  git add .
+  265  git status
+  266  git commit -m "show individual food page"
+  267  rails g scaffold Order name phone address food:references
+  268  rake db:migrate
+  269  rails s
+  270  rails console
+  271  rails s
+  272  rails console
+  273  \l
+  274  psql
+  275  rake db:create
+  276  rake db:migrate
+  277  rails console
+  278  rails s
+  279  git add .
+  280  git commit -m "Show larger image in single food page"
+  281  rails g scaffold Order name phone:integer address food:references
+  282  rake db:migrate
+  283  rails s
+  284  git add .
+  285  git commit -m "Add order"
+  286  rails s
+  287  git add .
+  288  git commit -m "Can go to create order page from food page"
+  289  rails s
+  290  git add .
+  291  git commit -m "show food image and name in new-order page"
+  292  rails s
+  293  git add .
+  294  git commit -m "Fix order is created without clicking submit button"
+  295  rails s
+  296  git add .
+  297  git commit -m "show food name & hide food_id in new-order page"
+  298  rails s
+  299  git add .
+  300  git commit -m "Edit Thank you for your order page"
+  301  rails
+  302  rails s
+  303  git push origin master
+  304  rails s
+  305  git add .
+  306  git commit -m "New design"
+  307  git status
+  308  rails s
+  309  git add .
+  310  git commit -m "Add search function"
+  311  git push origin master
+  312  psql
+  313  heroku create harry-restaurant
+  314  heroku create leprechaun
+  315  heroku create theleprechaun
+  316  git status
+  317  git push heroku master
+  318  heroku run rails db:migrate
+  319  heroku run console
+  320  heroku launch
+  321  heroku open
+  322  cd w*/h*
+  323  git status
+  324  git add .
+  325  git commit -m "add walkthrough & update readme"
+  326  git push origin master
+  327  cd w*
+  328  mkdir geolocation
+  329  cd g*
+  330  git init
+  331  git status
+  332  git add .
+  333  git commit -m "Add index.html"
+  334  git status
+  335  heroku create ehbuzz
+  336  git push heroku master
+  337  heroku launch
+  338  heroku open
+  339  heroku buildpacks:set heroku/php
+  340  git push heroku master
+  341  git status
+  342  git add .
+  343  git commit -m "change indexhtml to indexphp"
+  344  git status
+  345  git push heroku master
+  346  git open
+  347  heroku open
+  348  git add .
+  349  git commit -m "change size of button"
+  350  git push heroku master
+  351  heroku open
+  352  exit
+  353  cd w*
+  354  mkdir myauth
+  355  cd m
+  356  cd m*
+  357  rails -v
+  358  rails new myauth -d postgresql
+  359  cd myaut
+  360  cd m*
+  361  exit
+  362  cd w*
+  363  rails new myauth -d posgresql
+  364  rails new myauth -d postgresql
+  365  git add .
+  366  git init
+  367  l
+  368  cd m*
+  369  git init
+  370  ls
+  371  git add .
+  372  git commit -m "first set"
+  373  git status
+  374  rails g controller home index
+  375  rake db:create
+  376  rails s
+  377  rails g resource User email password_digest
+  378  rake db:migrate
+  379  rails s
+  380  rails c
+  381  rails console
+  382  bundle install
+  383  rails c
+  384  rails s
+  385  rails c
+  386  rails s
+  387  git add .
+  388  git commit -m "User can sign up"
+  389  git status
+  390  rails g controller sessions
+  391  rails s
+  392  git add .
+  393  git commit -m 'Implement login and logout'
+  394  rails g model Message sender_id:integer recipient_d:integer subject body:text
+  395  rails d model Message sender_id:integer recipient_d:integer subject body:text
+  396  rails g model Message sender_id:integer recipient_id:integer subject body:text
+  397  rake db:migrate
+  398  rails g controller messages incoming
+  399  rails s
+  400  rails c
+  401  rails s
+  402  rails c
+  403  rails s
+  404  git status
+  405  git add .
+  406  git commit -m "incoming messages"
+  407  git status
+  408  exit
+  409  cd w*
+  410  ls
+  411  cd m*
+  412  git remote add origin https://github.com/Harry-Nguyen/myauth.git
+  413  git push -u origin master
+  414  cd
+  415  ls
+  416  history > a.txt
+  417  exit
+  418  cd w*
+  419  cd m*
+  420  rails s
+  421  git status
+  422  exit
+  423  cd w*
+  424  git clone https://github.com/CoderClass/ruby-lab-2-hanoi-tao-dat-lab2.git
+  425  ls
+  426  cd r*
+  427  rvm install ruby-2.3.1
+  428  ls
+  429  rails db:create
+  430  bundle install
+  431  sudo install ruby-bundler
+  432  ls
+  433  rvm --version
+  434  rails -v
+  435  rails list
+  436  rvm list
+  437  exit
+  438  cd w*/r*
+  439  ls
+  440  rvm list
+  441  rvm gemset list
+  442  cd
+  443  cd w*
+  444  git clone https://github.com/CoderClass/ruby-lab-2-hanoi-tao-dat-lab2.git
+  445  ls
+  446  cd r*
+  447  rake db:create
+  448  bundle install
+  449  sudo apt install ruby-bundler
+  450  bundle install
+  451  gem install nio4r -v '1.2.1'
+  452  bundle install
+  453  cd
+  454  cd w
+  455  cd w*
+  456  ls
+  457  cd m*
+  458  rails s
+  459  exit
+  460  rvm -v
+  461  rails -v
+  462  ruby -v
+  463  psql -v
+  464  psql --version
+  465  rvm list
+  466  rvm gemset list
+  467  gem outdated
+  468  gem update
+  469  gem outdated
+  470  tvm gemset use global
+  471  rvm gemset use global
+  472  rvm gemset list
+  473  gemset oudated
+  474  gem outdated
+  475  gem update
+  476  gem outdated
+  477  rvm gemset list
+  478  rvm gemset use default
+  479  rvm gemset list
+  480  gem list
+  481  rvm list
+  482  cd /home/harry/.rvm/gems
+  483  ls
+  484  cd
+  485  rvm remove ruby-2.2.2 --archive --gems
+  486  cd /home/harry/.rvm/gems
+  487  ls
+  488  cd
+  489  rvm list
+  490  rvm gemset list
+  491  gem list
+  492  gem list > default.txt
+  493  rvm gemset use global
+  494  rvm gemset list
+  495  gem list > global.txt
+  496  sudo apt-get update
+  497  rvm gemset list
+  498  gem outdated
+  499  rvm gemset use default
+  500  gem outdated
+  501  rvm use ruby-2.3.1 --default
+  502  rvm gem list
+  503  rvm list
+  504  rvm gemset list
+  505  gem list > default.txt
+  506  rvm gemset use global
+  507  gem list > global.txt
+  508  rvm gemset use default
+  509  rvm gem list
+  510  rvm list
+  511  rvm gemset list
+  512  sudo apt-get install nodejs
+  513  gem -v
+  514  gem update --system
+  515  gem -v
+  516  rvm gemset list
+  517  rvm list
+  518  rvm gemset list
+  519  cd /home/harry/.rvm/gems
+  520  ls
+  521  cd ruby-2.3.1
+  522  ls
+  523  cd gems
+  524  ls
+  525  cd..
+  526  cd */ruby-2.3.0
+  527  cd ./ruby-2.3.0
+  528  clear
+  529  gem list
+  530  cd
+  531  rvm gemset list
+  532  rvm gemset use global
+  533  rvm gemset list
+  534  gem list
+  535  gem oudated
+  536  gem outdated
+  537  gem update
+  538  gem list
+  539  vim ~/.gemrc
+  540  nano ~/.gemrc
+  541  echo "gem: --no-document" >> ~/.gemrc
+  542  nano ~/.gemrc
+  543  gem list
+  544  gem install bundler
+  545  gem list
+  546  gem install nokogiri
+  547  gem list
+  548  gem oudated
+  549  gem outdated
+  550  tvm gemset list
+  551  rvm gemset list
+  552  rails -v
+  553  ruby -v
+  554  gem install rails
+  555  gem list
+  556  gem outdated
+  557  rvm gemset use default
+  558  gem list
+  559  gem install rails
+  560  gem outdated
+  561  gem update
+  562  gem outdated
+  563  rvm gemset use global
+  564  gem outdated
+  565  rvm gemset use default
+  566  rvm list
+  567  clear
+  568  rvm list
+  569  rvm gemset list
+  570  rvm -v
+  571  ruby -v
+  572  rails -v
+  573  psql --version
+  574  clear
+  575  exit
+  576  cd w*
+  577  ls
+  578  git clone https://github.com/coderschool/CoderDating.git
+  579  ls
+  580  cd c
+  581  cd c*
+  582  cd C*
+  583  rvm -v
+  584  ruby -v
+  585  rails -v
+  586  bundle install
+  587  rvm -v
+  588  ruby -v
+  589  rails -v
+  590  psql --version
+  591  rails db:create
+  592  rails db:migrate
+  593  rails s
+  594  cd
+  595  clear
+  596  cd w*/C*
+  597  rails console
+  598  rails coderdating:generate_users
+  599  rails c
+  600  register_mime_type
+  601  rails c
+  602  cd
+  603  psql
+  604  exit
+  605  cd w*
+  606  ls
+  607  mkdir harry-chat
+  608  cd harry-chat
+  609  wget https://gist.githubusercontent.com/harley/a1c1b879b6dbad1db705/raw/aa4f5925789335a3523d895cd83f70bce824320f/README.md
+  610  ls
+  611  rails new . -d postgresql
+  612  rails db:create
+  613  rails s
+  614  psql
+  615  clear
+  616  git remote add origin https://github.com/Harry-Nguyen/harry-chat.git
+  617  git status
+  618  cd
+  619  git status
+  620  cd w*
+  621  git status
+  622  cd .git
+  623  cd
+  624  cd w*
+  625  rm -d .git
+  626  rm -r .git
+  627  ls
+  628  ls -a
+  629  cd
+  630  ls -a
+  631  nano .gitconfig
+  632  nano .bash_history
+  633  nano .bash_logout
+  634  nano .bash_profile
+  635  nano .pg*
+  636  nano .psql_h*
+  637  nano .sudo*
+  638  cd .gem
+  639  ls
+  640  ls -a
+  641  cd s*
+  642  ls
+  643  ls -a
+  644  cd a*
+  645  ls
+  646  cd a*
+  647  cd q*
+  648  ls
+  649  cd M*
+  650  ls
+  651  cd
+  652  ls
+  653  ls -a
+  654  git status
+  655  exit
+  656  git status
+  657  cd D*
+  658  git status
+  659  ls -a
+  660  ls
+  661  cd
+  662  cd Do*
+  663  ls
+  664  ls -a
+  665  cd
+  666  cd w*
+  667  ls -a
+  668  git status
+  669  cd my*
+  670  ls
+  671  git status
+  672  cd
+  673  cd w*
+  674  ls
+  675  git status
+  676  cd harry-chat
+  677  git status
+  678  git remote add origin https://github.com/Harry-Nguyen/harry-chat.git
+  679  git init
+  680  ls -a
+  681  git status
+  682  git add .
+  683  git commit -m "Set up rails environment"
+  684  git remote add origin https://github.com/Harry-Nguyen/harry-chat.git
+  685  git push -u origin master
+  686  rails g model User email password_digest name
+  687  rails db:migrate
+  688  rails g controller Users
+  689  rails s
+  690  rails g controller home
+  691  rails s
+  692  bundle install
+  693  rails s
+  694  bundle install
+  695  rails s
+  696  git status
+  697  git add .
+  698  git commit -m "Add bootstrap, tether, home page, user model & controller"
+  699  git push origin master
+  700  rails s
+  701  bundle install
+  702  rails s
+  703  rails c
+  704  rails s
+  705  git status
+  706  git add .
+  707  git commit -m "User can register"
+  708  git status
+  709  rails s
+  710  rails g controller Sessions
+  711  rails s
+  712  git status
+  713  git add .
+  714  git commit -m "User can login, logout"
+  715  git status
+  716  exit
+  717  cd w*
+  718  cd harry-chat
+  719  ls
+  720  git status
+  721  history > a.txt
