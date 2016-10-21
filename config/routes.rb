@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #delete 'sessions/destroy', as: :logout
 
   get 'inbox' => 'messages#inbox'
+  get 'sent' => 'messages#sent'
   get 'messages/new'
   post 'messages' => 'messages#create'
   get 'messages' => 'messages#index'

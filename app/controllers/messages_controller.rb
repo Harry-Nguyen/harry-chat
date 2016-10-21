@@ -8,6 +8,11 @@ class MessagesController < ApplicationController
     @messages = @messages.sort{|x, y| y.created_at <=> x.created_at}
   end
 
+  def sent
+    @messages = Message.where(sender_id: session[:user_id])
+    @messages = @messages.sort{|x, y| y.created_at <=> x.created_at}
+  end
+
   def show
     
   end
