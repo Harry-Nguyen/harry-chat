@@ -19,10 +19,13 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
+    @friendship = Friendship.where(owner_id: session[:user_id])
   end
 
   def create
     @message = Message.new message_params
+    @message.sender_id = session[:user_id]
+
     if @message.save
       flash[:success] = 'Message is created successfully'
       redirect_to messages_path
@@ -42,6 +45,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:sender_id, :recipient_id, :title, :body);
+    params.require(:message).permit(:recipient_id, :title, :body);
   end
 end
