@@ -9,6 +9,16 @@
   </head>
 
   <body>
+  <nav class="container navbar navbar-light bg-faded">
+    <% if session[:user_id] %>
+      <% us = User.find(session[:user_id]) %>
+      <span>Hi, <%= us.name %></span>
+      <%= link_to "Logout", logout_path, :method => "delete", class: "btn btn-danger" %>
+    <% else %>
+      <%= link_to "Register", register_path, class: "btn btn-primary" %>
+      <%= link_to "Login", login_path, class: "btn btn-primary" %>
+    <% end %>
+  </nav>
   <div class="container">
     <%= yield %>
   </div>
